@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import * as colors from 'material-ui/styles/colors'
 import moment from 'moment'
+import countdown from 'countdown'
 
 const CountdownText = styled.h2`
   font-weight: 600;
@@ -18,11 +19,17 @@ export default class Countdown extends Component {
     this.setState({ counterRef })
   }
   render () {
-    console.log('render');
+    const destination = moment('2017-07-13T16:05:42').toDate()
+    const now = moment().toDate()
+    const remaining = countdown(destination, now)
+    const { days, minutes, hours, seconds } = remaining
     return (
       <CountdownText>
-        { moment('2017:07:13', 'YYYY:MM:DD').format('DD : hh : mm : ss') }
+        {days}:{minutes}:{hours}:{seconds}
       </CountdownText>
     )
+  }
+  componentWillUnmount = () => {
+    window.clearInterval(this.state.counterRef)
   }
 }

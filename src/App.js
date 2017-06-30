@@ -5,6 +5,7 @@ import { AvatarWheel } from './AvatarWheel.js'
 import CountdownBox from './CountdownBox'
 
 const FullScreenWrapper = styled.div`
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
   position: fixed;
   bottom: 0;
   width: 100vw;

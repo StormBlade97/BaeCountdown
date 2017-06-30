@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import MuiPaper from 'material-ui/Paper'
 import styled from 'styled-components'
 import * as colors from 'material-ui/styles/colors'
-import Avatar1 from './statics/Avatar1.PNG'
+import Avatar1 from './static/Avatar1.png'
 
 const Paper = styled(MuiPaper)`
     width: 450px;
