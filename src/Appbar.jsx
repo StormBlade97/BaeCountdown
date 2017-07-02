@@ -20,7 +20,7 @@ export default class Navbar extends React.PureComponent {
 				<Love color={colors.red400} />
 			</IconButton>}
 			iconElementRight={<IconButton><Code color={colors.red400} /></IconButton>}
-			title="BaeCountdown"
+			title="Bae Countdown"
 			titleStyle={{ color: colors.red400, fontFamily: 'Cookie, cursive', fontSize: '2rem' }}
 		/>)
 	}

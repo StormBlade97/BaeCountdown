@@ -4,6 +4,7 @@ import * as colors from 'material-ui/styles/colors'
 import { AvatarWheel } from './AvatarWheel.js'
 import CountdownBox from './CountdownBox'
 import Navbar from './Appbar'
+import FlightProgressBar from './FlightProgressBar'
 
 const FullScreenWrapper = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -24,6 +25,7 @@ export default class App extends Component {
        <FullScreenWrapper backgroundColor={colors.red400}>
          <AvatarWheel />
          <CountdownBox />
+         <FlightProgressBar />
        </FullScreenWrapper>
      </div>
     )

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Paper from 'material-ui/Paper'
 import styled from 'styled-components'
 import * as colors from 'material-ui/styles/colors'
-import { Motion, spring } from 'react-motion'
 import _ from 'lodash'
 import ChevronRight from 'material-ui/svg-icons/navigation/chevron-right';
 import ChevronLeft from 'material-ui/svg-icons/navigation/chevron-left';
@@ -11,7 +10,6 @@ const imagesReq = require.context('./static', false, /^.*\.*$/)
 const images = imagesReq.keys().map(imagesReq);
 console.log(images);
 // constants
-const DEG_TO_RAD = 0.0174533
 const MAIN_BUTTON_D = 400
 const CHILD_BUTTON_D = 50
 const CHILD_NUM = _.size(images)

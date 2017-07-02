@@ -22,7 +22,7 @@ export default class Countdown extends Component {
     this.setState({ counterRef })
   }
   render () {
-    const destination = moment('2017-07-13T16:05:42').toDate()
+    const destination = moment('2017-07-13T21:40:00').toDate()
     const now = moment().toDate()
     const remaining = countdown(destination, now)
     const { days, minutes, hours, seconds } = remaining
