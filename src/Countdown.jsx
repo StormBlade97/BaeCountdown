@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
+import CountdownUnit from './CountdownUnit'
 import styled from 'styled-components'
 import * as colors from 'material-ui/styles/colors'
 import moment from 'moment'
 import countdown from 'countdown'
 
 const CountdownText = styled.h2`
-  font-weight: 600;
-  font-size: 5rem;
+  font-size: 7rem;
   margin: 0;
-  transform: translate3d(0, 20%, 0)
+  transform: translate3d(0, 15%, 0);
+  font-family: 'Inconsolata', monospace;
+  color: ${colors.white};
+  display: flex;
 `
 export default class Countdown extends Component {
   componentWillMount = () => {
@@ -25,7 +28,10 @@ export default class Countdown extends Component {
     const { days, minutes, hours, seconds } = remaining
     return (
       <CountdownText>
-        {days}:{minutes}:{hours}:{seconds}
+        <CountdownUnit type="days">{days}</CountdownUnit>:
+        <CountdownUnit type="hours">{hours}</CountdownUnit>:
+        <CountdownUnit type="minutes">{minutes}</CountdownUnit>:
+        <CountdownUnit type="seconds">{seconds}</CountdownUnit>
       </CountdownText>
     )
   }

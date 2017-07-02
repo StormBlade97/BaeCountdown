@@ -4,21 +4,23 @@ import * as colors from 'material-ui/styles/colors'
 import Countdown from './Countdown'
 
 const CenterTextBox = styled.div`
-  transform: translate3d(0, 300px, 0);
+  transform: translate3d(0, 250px, 0);
   text-align: center;
 `
 const FlavorText = styled.div`
-  font-family: 'Roboto', san-serif;
-  text-transform: uppercase;
+  font-family: 'Inconsolas', monospace;
   font-size: 3rem;
-  font-weight: 300;
+  font-weight: 500;
   color: ${props => props.textColor};
+  border: 1px ${colors.fullWhite} solid;
+  border-radius: 4px;
+  background-color: white;
 `
 export default class CountdownBox extends Component {
   render () {
     return (
       <CenterTextBox>
-        <FlavorText textColor={colors.darkWhite}>He's coming!</FlavorText>
+        <FlavorText textColor={colors.red400}>He's coming!</FlavorText>
         <Countdown />
       </CenterTextBox>
       )

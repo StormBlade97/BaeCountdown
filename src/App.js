@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import * as colors from 'material-ui/styles/colors'
 import { AvatarWheel } from './AvatarWheel.js'
 import CountdownBox from './CountdownBox'
+import Navbar from './Appbar'
 
 const FullScreenWrapper = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -18,10 +19,13 @@ const FullScreenWrapper = styled.div`
 export default class App extends Component {
   render () {
     return (
-      <FullScreenWrapper backgroundColor={colors.red400}>
-        <AvatarWheel />
-        <CountdownBox />
-      </FullScreenWrapper>
+     <div>
+      <Navbar />
+       <FullScreenWrapper backgroundColor={colors.red400}>
+         <AvatarWheel />
+         <CountdownBox />
+       </FullScreenWrapper>
+     </div>
     )
   }
 }
