@@ -6,22 +6,37 @@ import Love from 'material-ui/svg-icons/action/favorite'
 import IconButton from 'material-ui/IconButton'
 import Code from 'material-ui/svg-icons/action/code'
 
-const ColoredAppbar = styled(Appbar)`
-	font-family: 'Cookie', cursive;
+const ColoredAppbar = styled.div`
 	background-color: ${colors.transparent} !important;
 	box-shadow: none !important;
+	position: fixed;
+	width: 100vw;
+	height: 56px;
+	top: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 `
-
+const HeroText = styled.h3`
+	font-family: 'Cookie', cursive;
+	color: ${colors.red400};
+	font-size: 2rem;
+	margin: 0;
+	position: absolute;
+	left: 72px;
+	@media (max-width: 700px) {
+		left: 50%;
+		transform: translateX(-50%) scale(1.3);
+	}
+`
 export default class Navbar extends React.PureComponent {
 	render = () => {
 		return (
-		<ColoredAppbar
-			iconElementLeft={<IconButton>
+		<ColoredAppbar>
+			<IconButton>
 				<Love color={colors.red400} />
-			</IconButton>}
-			iconElementRight={<IconButton><Code color={colors.red400} /></IconButton>}
-			title="Bae Countdown"
-			titleStyle={{ color: colors.red400, fontFamily: 'Cookie, cursive', fontSize: '2rem' }}
-		/>)
+			</IconButton>
+			<HeroText>Bae Countdown</HeroText>
+		</ColoredAppbar>)
 	}
 }

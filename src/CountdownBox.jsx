@@ -6,6 +6,10 @@ import Countdown from './Countdown'
 const CenterTextBox = styled.div`
   transform: translate3d(0, 250px, 0);
   text-align: center;
+  transition: 0.5s all ease;
+  @media (max-width: 700px) {
+    transform: translate3d(0, 150px, 0) scale(0.6);
+  }
 `
 const FlavorText = styled.div`
   font-family: 'Inconsolas', monospace;

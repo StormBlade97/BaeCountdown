@@ -19,6 +19,11 @@ const FAN_ANGLE = (CHILD_NUM - 1) * SEPARATION_ANGLE
 const BASE_ANGLE = (180 - FAN_ANGLE)/2
 // styled components
 const BorderLine = styled.div`
+  @media (max-width: 700px) {
+    width: ${FLY_OUT_R*1.7}px;
+    height: ${FLY_OUT_R*1.7}px;
+    transform: translate3d(-50%, -50%, 0) scale(0.7);
+  }
   width: ${FLY_OUT_R*2}px;
   height: ${FLY_OUT_R*2}px;
   position: absolute;
@@ -31,6 +36,7 @@ const BorderLine = styled.div`
   border: 2px solid;
   transform: translate3d(-50%, -50%, 0);
   border-color: ${props => props.borderColor};
+  transition: 0.3s all ease;
 `
 const MainAvatar = styled(Paper)`
   position: absolute;
@@ -54,6 +60,14 @@ const ChildAvatar = MainAvatar.extend`
   z-index: 5000;
   background-image: url(${({url}) => url});
   border: 2px ${({active}) => active ? colors.red400 : colors.transparent} solid;
+  @media (max-width: 700px) {
+    transform: translate3d(
+    ${({deltaX}) => (deltaX + CHILD_BUTTON_D/2)*0.85}px,
+    ${({deltaY}) => (-deltaY - CHILD_BUTTON_D/2)*0.85}px,
+    0) scale(${({active}) => (active) ? 1.5 : 1});
+    width: ${CHILD_BUTTON_D*0.7}px;
+    height: ${CHILD_BUTTON_D*0.7}px; 
+  }
 `
 const Prev = styled(IconButton)`
   border-radius: 50%;

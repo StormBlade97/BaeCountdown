@@ -6,9 +6,9 @@ import moment from 'moment'
 import countdown from 'countdown'
 
 const CountdownText = styled.h2`
-  font-size: 7rem;
+  font-size: 5rem;
   margin: 0;
-  transform: translate3d(0, 15%, 0);
+  transform: translate3d(0, 5%, 0);
   font-family: 'Inconsolata', monospace;
   color: ${colors.white};
   display: flex;

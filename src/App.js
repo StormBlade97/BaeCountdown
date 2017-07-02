@@ -6,28 +6,37 @@ import CountdownBox from './CountdownBox'
 import Navbar from './Appbar'
 import FlightProgressBar from './FlightProgressBar'
 
-const FullScreenWrapper = styled.div`
+const Background = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Roboto');
   position: fixed;
   bottom: 0;
   width: 100vw;
   height: 60vh;
   background-color: ${props => props.backgroundColor};
+  @media (max-width: 700px) {
+    height: 55vh;
+  }
+`
+const FullWidth = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  transform-origin: top center;
 `
 export default class App extends Component {
   render () {
-    return (
-     <div>
+    return (<div>
       <Navbar />
-       <FullScreenWrapper backgroundColor={colors.red400}>
-         <AvatarWheel />
-         <CountdownBox />
-         <FlightProgressBar />
-       </FullScreenWrapper>
-     </div>
+        <Background backgroundColor={colors.red400}>
+          <FullWidth>
+            <AvatarWheel />
+            <CountdownBox />
+            <FlightProgressBar />
+          </FullWidth>
+        </Background>
+      </div>
     )
   }
 }

@@ -11,9 +11,12 @@ const BottomBar = styled.div`
     width: 90vw;
     height: 48px;
     position: absolute;
-    bottom: 24px;
+    bottom: 12px;
     display: flex;
     justify-content: space-between;
+    @media (max-height: 500px) {
+        display: none;
+    }
 `
 const Flag = styled(Paper)`
     width: 48px;
@@ -22,6 +25,9 @@ const Flag = styled(Paper)`
     background-position: center;
     background-size: 100% 100%;
     border: 5px white solid;
+    @media (max-height: 1000px) {
+        transform: scale(0.7);
+    }
 `
 const AirplaneIcon = () => (
     <svg style={{
@@ -45,6 +51,9 @@ const ProgressBar = styled.div`
     top: 50%;
     transform: translate3d(0, -50%, 0);
     z-index: -1;
+    @media (max-height: 1000px) {
+        transform: translate3d(0, -50%, 0) scale(0.7);
+    }
 `
 export default class FlightProgressBar extends React.PureComponent {
     render = () => {
@@ -52,7 +61,7 @@ export default class FlightProgressBar extends React.PureComponent {
             <BottomBar>
                 <Flag circle zDepth={0} url={usflag}></Flag>
                 <Flag circle zDepth={0} url={finnishflag}></Flag>
-                <ProgressBar percent={10}>
+                <ProgressBar percent={50}>
                     <AirplaneIcon />
                 </ProgressBar>
             </BottomBar>
