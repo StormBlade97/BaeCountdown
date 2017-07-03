@@ -1,5 +1,6 @@
 {
   "name": "bae-count-down",
+  "homepage" : "https://stormblade97.github.io/BaeCountdown/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
