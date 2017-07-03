@@ -21,6 +21,7 @@ const HeroText = styled.h3`
 	font-family: 'Cookie', cursive;
 	color: ${colors.red400};
 	font-size: 2rem;
+	font-weight: 200;
 	margin: 0;
 	position: absolute;
 	left: 72px;
@@ -36,7 +37,7 @@ export default class Navbar extends React.PureComponent {
 			<IconButton>
 				<Love color={colors.red400} />
 			</IconButton>
-			<HeroText>Bae Countdown</HeroText>
+			<HeroText>Bae, I like you the way you are.</HeroText>
 		</ColoredAppbar>)
 	}
 }
