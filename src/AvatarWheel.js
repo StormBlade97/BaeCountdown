@@ -13,7 +13,7 @@ console.log(images);
 const MAIN_BUTTON_D = 400
 const CHILD_BUTTON_D = 50
 const CHILD_NUM = _.size(images)
-const SEPARATION_ANGLE = 36
+const SEPARATION_ANGLE = 30
 const FLY_OUT_R = 300
 const FAN_ANGLE = (CHILD_NUM - 1) * SEPARATION_ANGLE
 const BASE_ANGLE = (180 - FAN_ANGLE)/2
