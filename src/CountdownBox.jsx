@@ -24,7 +24,7 @@ export default class CountdownBox extends Component {
   render () {
     return (
       <CenterTextBox>
-        <FlavorText textColor={colors.red400}>He's coming!</FlavorText>
+        <FlavorText textColor={colors.red400}>Days together</FlavorText>
         <Countdown />
       </CenterTextBox>
       )

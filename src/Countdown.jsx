@@ -25,9 +25,10 @@ export default class Countdown extends Component {
     const destination = moment('2017-07-13T21:40:00').toDate()
     const now = moment().toDate()
     const remaining = countdown(destination, now)
-    const { days, minutes, hours, seconds } = remaining
+    const { days, minutes, hours, seconds, months } = remaining
     return (
       <CountdownText>
+        <CountdownUnit type="months">{months}</CountdownUnit>:
         <CountdownUnit type="days">{days}</CountdownUnit>:
         <CountdownUnit type="hours">{hours}</CountdownUnit>:
         <CountdownUnit type="minutes">{minutes}</CountdownUnit>:

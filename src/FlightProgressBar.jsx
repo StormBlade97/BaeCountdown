@@ -60,8 +60,8 @@ export default class FlightProgressBar extends React.PureComponent {
         return (
             <BottomBar>
                 <Flag circle zDepth={0} url={usflag}></Flag>
-                <Flag circle zDepth={0} url={finnishflag}></Flag>
-                <ProgressBar percent={50}>
+                <Flag circle zDepth={5} url={finnishflag}></Flag>
+                <ProgressBar percent={100}>
                     <AirplaneIcon />
                 </ProgressBar>
             </BottomBar>

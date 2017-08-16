@@ -37,7 +37,7 @@ export default class Navbar extends React.PureComponent {
 			<IconButton>
 				<Love color={colors.red400} />
 			</IconButton>
-			<HeroText>Bae, I like you the way you are.</HeroText>
+			<HeroText>What's right with you? - Everything</HeroText>
 		</ColoredAppbar>)
 	}
 }
